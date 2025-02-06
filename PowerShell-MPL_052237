@@ -61,7 +61,7 @@ cat .\for.ps1
 for (($i = 0), ($j = 0); $i-lt 5; $i++)
 {
 	"´$i:$i"
- "´$j:$j"
+ 	"´$j:$j"
 } 
 ************************************************
 .\for.ps1
@@ -79,17 +79,48 @@ cat . \foreachl.psl
 $ssoo = "freebsd", "openbsd", "solaris", "fedora", "ubuntu", "netbsd"
 foreach ($so in $ssoo)
 {
- Write-Host $so
+	Write-Host $so
 } 
 ************************************************
 . \foreachl.psl
 ************************************************
+cat .\while.ps1
+$num = 0
 
+while ($num -ne 3)
+{
+	$num++
+	Write-Host $num
+}
+************************************************
+.\while .psl
+************************************************
+cat .\whi1e2.ps1
+$num = 0
 
+while ($num -ne 5)
+{
+	if ($num -eq 1) { $num = $num + 3 ; Continue }
+	$num++
+	Write-Host $num
+}
+************************************************
+.\whi1e2.ps1
+************************************************
+cat .\do-while.ps1
+$valor = 5
+$multiplicacion = 1
+do
+{
+	$multiplicacion = $multiplicacion * $valor
+	$valor- -
+}
+while ($valor -gt 0)
 
-
-
-
+Write-Host $multiplicacion
+************************************************
+.\do-while.ps1
+************************************************
 
 
 
