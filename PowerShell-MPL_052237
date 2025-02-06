@@ -1,47 +1,102 @@
 Variables y tipos de datos. 
 
 $variable1="Hola" 
-
 $variable2="Que tal?" 
-
 $variable3=100 
-
 ${VAR iable4}=200 
-
 New-Variable -name variable5 -value 300 
-
+************************************************
 $variable5 
-
 $variable1="Hola" 
-
 $variable1 
-
 $variable2 
-
 $variable3 
-
 ${VAR iable4} 
-
+************************************************
 $variable1+$variable2 
-
 $variable3+${VAR iable4} 
-
 $variable3-${VAR iable4} 
-
 $variable1+$variable2 
-
+************************************************
 $$ 
-
 $^ 
-
-$? 
-
+$?
+************************************************
 get-help about_automatic_variables 
-
 Get-Help about_preferences_variables 
-
 $.GetType() 
 
- 
 
+-------------------------------------------------------------------
 Ejecuciones Condicionales y Bucles 
+************************************************
+$condicion = $true
+if ( $condicion )
+{
+	Write-Output "La condicion era veradera"
+}
+else
+{
+	Write-Output "La condicion era falsa"
+} 
+************************************************
+.\condicionales.ps1
+************************************************
+cat .\switch.ps1
+{
+ 1 {"[$_] es uno."}
+ 2 {"[$_] es dos."}
+ 3 {"[$_] es tres."}
+ 4 {"[$_] es cuatro."}
+ "se*" { "[$_] coincide con se*.}
+ Default {
+  "No hay coincidencias con [$_]"
+} 
+************************************************
+.\switch.ps1
+-------------------------------------------------------------------
+Operadores lógicos y comparativos
+************************************************
+cat .\for.ps1
+for (($i = 0), ($j = 0); $i-lt 5; $i++)
+{
+	"´$i:$i"
+ "´$j:$j"
+} 
+************************************************
+.\for.ps1
+************************************************
+cat .\for2.ps1
+for (($i = 0), ($j = 0); $i-lt 5; $i++; $($i++;$j++))
+{
+	"´$i:$i"
+ "´$j:$j"
+} 
+************************************************
+.\for2.ps1
+************************************************
+cat . \foreachl.psl
+$ssoo = "freebsd", "openbsd", "solaris", "fedora", "ubuntu", "netbsd"
+foreach ($so in $ssoo)
+{
+ Write-Host $so
+} 
+************************************************
+. \foreachl.psl
+************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
