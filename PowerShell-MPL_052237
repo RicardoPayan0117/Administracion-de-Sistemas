@@ -120,14 +120,48 @@ while ($valor -gt 0)
 Write-Host $multiplicacion
 ************************************************
 .\do-while.ps1
+
+-------------------------------------------------------------------
+Cmdlets
 ************************************************
+Get-Cormand -Type Cmdlet | Sort-Object -Property Noun | Format-Table -GrounpBy Noun
+Get-Command -Name <cmdlet> -Args Cert: -Syntax
+Get-Command -Name dir // Get-Command -Name <Alias>
+Get-Command -Noun WSManInstance // Get-Command -Noun <Recurso>
 
+-------------------------------------------------------------------
+Objetos y Pipeline
+************************************************
+Get-Service -Name "LSM" | Get-Member
+Get-Service -Name "LSM" | Get-Member -MemberType Propierty
+Get-ltem .\test.txt | Get-Member -MemberType Method
+Get-ltem .\test.txt | Select-Object Name, Length
 
+Get-Service | Select-Object -Last 5
+Get-Service | Select-Object -First 5
+Get-Service | Where-Object {$_.Status -eq "Running"}
 
+(Get-ltem .\test.txt) .IsReadOn1y
+(Get-ltem .\test. txt) .IsReadOn1y = 1
 
+Get-Chi1dItem *.txt
+(Get-ltem .\test.txt).CopyTo( "Ruta" )
 
+(Get-ltem .\test.txt) .De1ete()
+Get-Chi1dItem *.txt
+************************************************
+Get-Process -Name Acrobat | Stop-Process
+Get-Help -Full Get-Process
+Get-He1p -Full Stop-Process
 
+Get-Process -Name Acrobat | Stop-Process
 
+Get-He1p -Full Get-Chi1dItem
+Get-He1p -Full Get-C1ipboard
 
+Get-He1p -Full Stop-Service
 
+-------------------------------------------------------------------
+Funciones
+************************************************
 
