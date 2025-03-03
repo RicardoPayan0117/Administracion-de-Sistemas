@@ -1,4 +1,4 @@
-o# mensajes.ps1
+# mensajes.ps1
 
 function MensajeInicio {
     Write-Host "Bienvenido al script de configuracion del cliente SSH en Windows Server 2025"
