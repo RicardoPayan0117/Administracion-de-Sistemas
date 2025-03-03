@@ -13,7 +13,7 @@ while ($true) {
     Write-Host "1. Instalar cliente SSH"
     Write-Host "2. Conectar al servidor SSH"
     Write-Host "3. Salir"
-    $opcion = Read-Host "Opción"
+    $opcion = Read-Host "Opcion"
 
     switch ($opcion) {
         1 {
