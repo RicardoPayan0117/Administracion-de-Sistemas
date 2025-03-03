@@ -29,12 +29,12 @@ MensajeInicio
 do {
     $ScopeName = Read-Host "Nombre del Ámbito DHCP"
     if ([string]::IsNullOrWhiteSpace($ScopeName)) {
-        Write-Host "[❌] Error: El nombre del ámbito no puede estar vacío." -ForegroundColor Red
+        Write-Host "Error: El nombre del ámbito no puede estar vacio." -ForegroundColor Red
     }
 } until (-not [string]::IsNullOrWhiteSpace($ScopeName))
 
 do {
-    $ScopeNetwork = Read-Host "Dirección de red del Ámbito (ej. 192.168.100.0)"
+    $ScopeNetwork = Read-Host "Direccion de red del Ambito (ej. 192.168.100.0)"
     if (-not (ValidarIp $ScopeNetwork)) {
         MensajeSubredInvalida
     }
@@ -76,7 +76,7 @@ do {
 } until (ValidarIp $DNSServer)
 
 do {
-    $LeaseDuration = Read-Host "Duración de la concesión en días (ej. 8)"
+    $LeaseDuration = Read-Host "Duracion de la conexion en dias (ej. 8)"
     if (-not (ValidarEntero $LeaseDuration)) {
         MensajeDuracionInvalida
     }
