@@ -1,0 +1,8 @@
+powershell -ExecutionPolicy Bypass -File .\"Nombre de archivo".ps1  //Abrir archivos .ps1 en powershell para saltarse permisos.
+Ping  //Para hacerr ping a otro equipo.
+ipconfig  //Para ver la ip, sub, Mask etc del equipo.
+dir  //para ver el contenido de la carpeta seleccionada.
+ssh "Nombre del equipo servidor"@"ip de equipo"  //Para conectarse de manera manual a un servidor SSH.
+Get-Command //PowerShell permite, a través de este comando, conocer todas las funciones y características que incluyen sus cmdlets
+Copy-Item "C:\Proyectos.htm" -Destination "C:\MyData\Proyectos.txt" //Para copiar carpertas o archivos.
+Remove-Item "C:\MyData\Finanzas.txt" //Para eliminar archivos especificos.
